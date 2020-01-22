@@ -1,0 +1,29 @@
+{% extends 'tasks/base.html' %}
+
+{% block content_title %}Создание новой задачи{% endblock %}
+
+{% block content %}
+
+<div>
+    <h1>
+        Создание новой задачи
+    </h1>
+</div>
+
+<form action="/create/" method="post">
+    <div>
+        <label for="title">Название задачи: </label>
+        <input id="title" class="form-control" type="text" name="title">
+    </div>
+    <div>
+        <label for="description">Описание задачи: </label>
+        <textarea id="description" class="form-control" type="text" name="description" rows="5"></textarea>
+    </div>
+    <div>
+        <input type="submit" value="Создать задачу" class="btn btn-primary mt-3">
+        {% csrf_token %}
+    </div>
+
+</form>
+
+{% endblock %}
