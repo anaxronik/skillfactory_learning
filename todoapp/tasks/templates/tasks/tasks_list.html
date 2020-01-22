@@ -1,0 +1,38 @@
+{% extends 'tasks/base.html' %}
+
+{% block content_title %}Заголовок наследуемого окна{% endblock %}
+
+{% block content %}
+<div class="mt-3 mb-3">
+    <button type="button" class="btn btn-outline-danger btn-block">Создать новое дело</button>
+</div>
+{% for task in tasks %}
+<div class="card mb-4 box-shadow">
+    <div class="card-header">
+        {{ task.title }}
+    </div>
+
+    <div class="card-body font-weight-normal">
+        {{ task.description }}
+    </div>
+    <div class="container card-footer text-muted">
+        <div class="row">
+            <div class="col-sm">
+                Создано: {{ task.created }}
+            </div>
+            <div class="col-sm">
+                Изменено: {{ task.updated }}
+            </div>
+            <div class="col-sm">
+                Статус: {{ task.is_completed|yesno:"ЗАВЕРШЕНО,НЕЗАВЕРШЕНО" }}
+            </div>
+            <div class="col-sm">
+                <button type="button" class="btn btn-outline-danger btn-block">Удалить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endfor %}
+
+{% endblock %}
