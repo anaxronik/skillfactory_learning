@@ -9,8 +9,14 @@
 <body>
 <div class="container-fluid bg-dark text-white">
     <div class="container">
-        <a class="text-white" href="/tasks/"><h2>СПИСОК ДЕЛ</h2></a>
-
+        <div class="row">
+            <div class="col-sm">
+                <a class="text-white" href="/tasks/"><h2>СПИСОК ДЕЛ</h2></a>
+            </div>
+            <div class="col-sm">
+                <a class="text-white" href="{% url 'logout' %}">ВЫЙТИ</a>
+            </div>
+        </div>
     </div>
 </div>
 
