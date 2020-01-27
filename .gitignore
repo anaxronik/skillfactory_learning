@@ -1,5 +1,5 @@
 /venv
 /.vscode
-.vscode/settings.json
-.idea/
-/todoapp/media/user_avatars/2020/
+/.idea
+/todoapp/media/user_avatars
+ds.sqlite3
