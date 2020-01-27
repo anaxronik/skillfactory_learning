@@ -1,0 +1,10 @@
+.add {
+    outline: 0;
+    width: 34%;
+    height: 36px;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    background-color: #3b3b3b;
+}

@@ -11,5 +11,4 @@ urlpatterns = [
     path('modify/<int:uid>', views.modify, name='modify_task'),
     path('test/', views.test, name='test'),
     path('details/<int:pk>', views.TaskDetail, name='details'),
-
 ]
